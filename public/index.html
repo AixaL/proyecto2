@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Aplicación con Sockets</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+    <h1>Proyecto2</h1>
+    <div id="messages"></div>
+    <br />
+    <form onsubmit="return addMessage(this)">
+        <input type="file" id="texto" placeholder="Cuéntanos algo...">
+        <input type="submit" value="Enviar!">
+    </form>
+    <div id="primera">
+
+    </div>
+    <div id="imagenes">
+        <img id="imagen" src="" alt="">
+    </div>
+    
+</body>
+
+</html>
