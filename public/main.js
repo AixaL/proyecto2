@@ -26,12 +26,15 @@ function addMessage(e) {
     }
 
     function message(text){
+        var encrypted = (sjcl.encrypt("patos", text));
+        console.log(encrypted);
         var extension = document.getElementById('texto').files[0].name.split('.').pop().toLowerCase();
         var nombre = document.getElementById('texto').files[0].name;
         var nombre2= nombre.split(".");
          var message = {
              img: text,
              name: nombre2[0],
+             encrypted: encrypted,
          };
          socket.emit('new-message', message);
     }
